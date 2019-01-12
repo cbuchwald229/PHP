@@ -11,6 +11,7 @@
 	</head>
 	<body>
     <h1>Intro to PHP</h1>
-     <?php echo '<p>Hello World, my name is Christina Buchwald</p>'; ?>
+     <?php echo '<p>Hello World,</p>'; ?>
+		 <?php echo '<p>my name is Christina Buchwald</p>'; ?>
 	</body>
 </html>
