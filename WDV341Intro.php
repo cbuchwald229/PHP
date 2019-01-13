@@ -43,6 +43,10 @@
 						<div>
 							<a href="Homework/Unit1/testGit.php">Test Git Assignment</a>
 						</div>
+						<h3>Unit 2</h3>
+						<div>
+							<a href="Homework/Unit2/phpBasics.php">PHP Basics Assignment</a>
+						</div>
 					</div>
 				</div>
 			</div>
