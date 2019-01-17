@@ -34,6 +34,7 @@
 				</li>
 			</ul>
 		</nav>
+		<img src="../images/php_class.jpg" width=300px height=300px class="imagefloatright"/>
 		<div>
 			<h2>Homework Links WDV341</h2>
 			<div class="row">
