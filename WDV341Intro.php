@@ -48,6 +48,9 @@
 						<div>
 							<a href="Homework/Unit2/phpBasics.php">PHP Basics Assignment</a>
 						</div>
+						<div>
+							<a href="Homework/Unit2/phpFunctions.php">PHP Functions</a>
+						</div>
 					</div>
 				</div>
 			</div>
