@@ -48,8 +48,13 @@
 						<div>
 							<a href="Homework/Unit2/phpBasics.php">PHP Basics Assignment</a>
 						</div>
+						<h3>Unit 3</h3>
 						<div>
-							<a href="Homework/Unit2/phpFunctions.php">PHP Functions</a>
+							<a href="Homework/Unit3/phpFunctions.php">PHP Functions</a>
+						</div>
+						<h3>Emailer</h3>
+						<div>
+							<a href="Homework/Emailer/emailer.php">Emailer</a>
 						</div>
 					</div>
 				</div>
