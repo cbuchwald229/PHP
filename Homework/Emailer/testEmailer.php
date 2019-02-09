@@ -29,16 +29,18 @@
   </head>
   <body>
     <h1>Howdy!</h1>
-    <p><?php //echo $testEmail->getSenderAddress(); ?></p>
-    <p><?php //echo $testEmail->getSendToAddress(); ?></p>
-    <p><?php //echo $testEmail->getSubjectLine(); ?></p>
-    <p><?php //echo $testEmail->getMessageBody(); ?></p>
+    <p><?php echo $testEmail->getSenderAddress(); ?></p>
+    <p><?php echo $testEmail->getSendToAddress(); ?></p>
+    <p><?php echo $testEmail->getSubjectLine(); ?></p>
+    <p><?php echo $testEmail->getMessageBody(); ?></p>
     <p><?php echo $testEmail->sendNewMessage(); // Test the mail() to send email ?></p>
+    <!--<input type="submit" name="email1" id="email1" value="Submit Email 1" onclick=""/>-->
   </br>
-    <p><?php //echo $clientEmail->getSenderAddress(); ?></p>
-    <p><?php //echo $clientEmail->getSendToAddress(); ?></p>
-    <p><?php //echo $clientEmail->getSubjectLine(); ?></p>
-    <p><?php //echo $clientEmail->getMessageBody(); ?></p>
+    <p><?php echo $clientEmail->getSenderAddress(); ?></p>
+    <p><?php echo $clientEmail->getSendToAddress(); ?></p>
+    <p><?php echo $clientEmail->getSubjectLine(); ?></p>
+    <p><?php echo $clientEmail->getMessageBody(); ?></p>
     <p><?php echo $clientEmail->sendNewMessage(); // Test the mail() to send email ?></p>
+    <!--<input type="submit" name="email2" id="email2" value="Submit Email 2" onclick=""/>-->
   </body>
 </html>

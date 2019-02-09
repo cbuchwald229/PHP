@@ -41,7 +41,13 @@
       $subject = $this->getSubjectLine();
       $message = $this->getMessageBody();
       $headers = "From: " . $this->getSenderAddress() . "\r\n";
-      return mail($to, $subject, $message, $headers);
+      $retval =  mail($to, $subject, $message, $headers);
+      if($retval == true)
+      {
+        echo "Message sent successfully";
+      } else {
+        echo "Message could not be sent";
+      }
     }
   }
 ?>
