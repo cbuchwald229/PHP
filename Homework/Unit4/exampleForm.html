@@ -3,6 +3,14 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>WDV341 Intro PHP - Form Example</title>
+    <style>
+      #displayToy {
+        display: none;
+      }
+      .displayToy {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <h1>WDV341 Intro PHP</h1>
@@ -20,6 +28,27 @@
       </p>
       <p>School:
         <input type="text" name="school" id="school" />
+      </p>
+      <p>Favorite Color: <br>
+        <input type="radio" name="color" value="purple" checked> Purple<br>
+        <input type="radio" name="color" value="pink"> Pink<br>
+        <input type="radio" name="color" value="teal"> Teal<br>
+      </p>
+      <p>Do you like cats, dogs, or both? <br>
+        <input type="checkbox" name="preference" value="dogs"> Dogs<br>
+        <input type="checkbox" name="preference" value="cats"> Cats<br>
+      </p>
+      <label for="favoritePattern">Favorite pattern:
+        <select id="pattern" name="pattern">
+          <option value="paisley">Paisley</option>
+          <option value="peacock">Peacock</option>
+          <option value="rainbow">Rainbow</option>
+          <option value="watermelon">Watermelon</option>
+        </select>
+      </label>
+      <p class="displayToy">
+        <label for="toy_choice">Toy Choicer: </label>
+        <input type="text" name="toy_choice" id="toy_choice">
       </p>
       <p>
         <input type="submit" name="button" id="button" value="Submit" />
