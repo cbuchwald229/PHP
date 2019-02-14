@@ -19,7 +19,8 @@
 	$inLastName = $_POST["lastName"];		//Get the value entered in the last name field
 	$inSchool = $_POST["school"];			//Get the value entered in the school field
 	$inColor = $_POST["color"];
-	$inAnimal = $_POST["preference"];
+	$inDogs = isset($_POST["dogs"]) ? $_POST["dogs"] : "no";
+	$inCats = isset($_POST["cats"]) ? $_POST["cats"] : "no";
 	$inPattern = $_POST["pattern"];
 ?>
 <!DOCTYPE html>
@@ -49,7 +50,8 @@
 		<p>First Name: <?php echo $inFirstName; ?></p>
 		<p>Last Name: <?php echo $inLastName; ?></p>
 		<p>Color: <?php echo $inColor; ?></p>
-		<p>Favorite Animal: <?php echo $inAnimal; ?></p>
+		<p>Likes Dogs: <?php echo $inDogs; ?></p>
+		<p>Likes Cats: <?php echo $inCats; ?></p>
 		<p>Favorite Pattern: <?php echo $inPattern; ?></p>
 	</body>
 </html>

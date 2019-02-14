@@ -4,17 +4,18 @@
   $radio="";
   $prod_number="";
 
-  $name_errMsg="Please enter a name.";
-  $price_errMsg="Please enter a price.";
-  $radio_errMsg="Please select a color.";
-  $number_errMsg="Please enter a number.";
+  $name_errMsg="";
+  $price_errMsg="";
+  $radio_errMsg="";
+  $number_errMsg="";
 
   if(isset($_POST['prod_submit']) )
   {
-    // Check for the honeypot field. If the name is set then it came from a bot
+    // Check for the honeypot field. If is set, then it came from a bot
     if(isset($_POST["prod_number"])) {
-      //header("Location: http://www.google.com/")
-      // FIX THIS!
+      //header("Location: selfPostExample.php");
+      //Jeff, when I uncommented this it would just always catch it and give me the blank form. So somehow
+      //the prod_number is getting set without me doing so. Why is it falling into this every time?
     }
     echo "The form has been submitted. ";
 
