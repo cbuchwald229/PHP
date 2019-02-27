@@ -7,8 +7,15 @@
   <head>
     <meta charset="UTF-8">
     <title>Testing the Validations class</title>
+    <style>
+    body {
+      background-color: purple;
+      color: lavender;
+    }
+    </style>
   </head>
   <body>
+    <h1>THIS CLASS IS TESTING VALIDATIONS</h1>
     <p>Cannot Be Empty</p>
     <p>0 <?php if($formValidations->cannotBeEmpty(0)) {
         echo "True";
@@ -41,5 +48,21 @@
       } else {
         echo "Invalid";
       }?></p>
+      <p>US Phone Validation</p>
+      <p>(521)555-988 <?php if($formValidations->validateUsPhone("(521)555-988")) {
+          echo "Valid";
+        } else {
+          echo "Invalid";
+        }?></p>
+      <p>521-555-9888 <?php if($formValidations->validateUsPhone("521-555-9888")) {
+          echo "Valid";
+        } else {
+          echo "Invalid";
+        }?></p>
+      <p>521.544.9888 <?php if($formValidations->validateUsPhone("521.544.9888")) {
+          echo "Valid";
+        } else {
+          echo "Invalid";
+        }?></p>
   </body>
 </html>

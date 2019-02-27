@@ -67,6 +67,10 @@
 						<div>
 							<a href="Homework/Unit5/selfPostValidation/customerRegistrationForm.php">Customer Registration Form</a>
 						</div>
+						<h3>Unit 6</h3>
+						<div>
+							<a href="Homework/Unit6/testValidations.php">Simple Test for Validations</a>
+						</div>
 					</div>
 				</div>
 			</div>
