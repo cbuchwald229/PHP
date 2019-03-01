@@ -64,5 +64,13 @@
         } else {
           echo "Invalid";
         }?></p>
+      <p>Clean Function</p>
+      <p>Hello *(\*\()) <?php $output = ($formValidations->clean("Hello *(\*\())"));
+        echo "Cleaned: ".$output ?></p>
+      <p>Name</p>
+      <p>Christina $ Me <?php $nameOutput =($formValidations->validateName("Christina $ Me"));
+        echo $nameOutput ?></p>
+      <p>"" <?php $nameOutput =($formValidations->validateName(""));
+        echo $nameOutput ?></p>
   </body>
 </html>

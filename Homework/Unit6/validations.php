@@ -32,5 +32,20 @@
         return false;
       }
     }
+
+    public function clean($string) {
+       $string = preg_replace('/[^A-Za-z0-9\- ]/', '', $string); // Removes special chars.
+
+       return $string; // Replaces multiple hyphens with single one.
+    }
+
+    public function validateName($inName) {
+      $isItEmpty = self::cannotBeEmpty($inName);
+      if ($isItEmpty) {
+        return "Cannot be Empty";
+      } else {
+        return $outName = self::clean($inName);
+      }
+    }
   }
 ?>
