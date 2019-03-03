@@ -26,11 +26,31 @@
       // Remove "." from number
       $phone_number = str_replace(".", "", $phone_number);
       // Check the lenght of number for US
-      if (strlen($phone_number) == 7 || strlen($phone_number) == 10  || strlen($phone_number) == 11) {
+      if (strlen($phone_number) == 10  || strlen($phone_number) == 11) {
          return true;
       } else {
         return false;
       }
+    }
+
+    public function validateRegistration($inRegistration) {
+      if($inRegistration == "neg") {
+        return false;
+      } else {
+         return true;
+       }
+    }
+
+    public function validateRadio($inRadioValue) {
+      if($inRadioValue == "") {
+        return false;
+      } else {
+         return true;
+       }
+    }
+
+    public function sanitizeSpecialBox($inSpecial) {
+      return $inSpecial = self::clean($inSpecial);
     }
 
     public function clean($string) {
@@ -42,7 +62,7 @@
     public function validateName($inName) {
       $isItEmpty = self::cannotBeEmpty($inName);
       if ($isItEmpty) {
-        return "Cannot be Empty";
+        return false;
       } else {
         return $outName = self::clean($inName);
       }

@@ -71,6 +71,13 @@
 						<div>
 							<a href="Homework/Unit6/testValidations.php">Simple Test for Validations</a>
 						</div>
+						<div>
+							<a href="Homework/Unit6/customerRegistrationValidation.php">Customer Registration Form with Validation</a>
+						</div>
+						<h3>Unit 7</h3>
+						<div>
+							<a href="Homework/Unit7/firstDbPage.php">Testing Database Connection</a>
+						</div>
 					</div>
 				</div>
 			</div>

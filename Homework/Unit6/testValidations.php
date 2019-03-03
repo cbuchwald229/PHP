@@ -71,6 +71,6 @@
       <p>Christina $ Me <?php $nameOutput =($formValidations->validateName("Christina $ Me"));
         echo $nameOutput ?></p>
       <p>"" <?php $nameOutput =($formValidations->validateName(""));
-        echo $nameOutput ?></p>
+        echo "Invalid" ?></p>
   </body>
 </html>

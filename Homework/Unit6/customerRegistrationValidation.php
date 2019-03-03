@@ -12,37 +12,61 @@
   $sundayAwardBrunch="";
   $special="";
 
+  $nameErrMsg="";
+  $numberErrMsg="";
+  $emailErrMsg="";
+  $badgeErrMsg="";
+  $registrationErrMsg="";
+
   $validForm = false;
 
   if(isset($_POST['prod_submit']) )
   {
     // Check for the honeypot field. If the name is set then it came from a bot
     if(isset($_POST["prod_number"])) {
-      //header("Location: customerRegistrationForm.php");
+      //header("Location: http://www.artisticpawprint.com");
       //Jeff, when I uncommented this it would just always catch it and give me the blank form. So somehow
       //the prod_number is getting set without me doing so. Why is it falling into this every time?
     }
-    echo "The form has been submitted. ";
 
     // Get data from name=value pair
     $name = $_POST["name"];
     $phoneNumber = $_POST["phoneNumber"];
     $emailAddress = $_POST["emailAddress"];
-    $radio = $_POST["radio"];
+    $radio = isset($_POST["radio"]) ? $_POST["radio"] : "";
     $registration = $_POST["registration"];
     $fridayDinner = isset($_POST["fridayDinner"]) ? $_POST["fridayDinner"] : "";
     $saturdayLunch = isset($_POST["saturdayLunch"]) ? $_POST["saturdayLunch"] : "";
     $sundayAwardBrunch = isset($_POST["sundayAwardBrunch"]) ? $_POST["sundayAwardBrunch"] : "";
     $special = $_POST["special"];
 
-    $validForm = true;
+    if(!($formValidations->validateName($name))) {
+      $nameErrMsg = "Please enter a valid name.";
+    }
+    // Sanitize name and check if it's empty
+    if(!($formValidations->validateUsPhone($phoneNumber))) {
+      $numberErrMsg = "Please enter a valid US phone number.";
+    }
+    //I programmed this to sanitize and accept US numbers
+    if(!($formValidations->validateEmail($emailAddress))) {
+      $emailErrMsg = "Please enter a valid email.";
+    }
+    // Make sure the email is in the correct format
+    if(!($formValidations->validateRadio($radio))) {
+      $badgeErrMsg = "Please select a badge type.";
+    }
+    // Make sure one is selected
+    if(!($formValidations->validateRegistration($registration))) {
+      $registrationErrMsg = "Please select a registration type.";
+    }
+    // Make sure one is selected
+    $formValidations->sanitizeSpecialBox($special);
+    // Since this isn't required, I just sanitized it
 
-    $formValidations->validateName($name);
-    $formValidations->validateUsPhone($phoneNumber);
-    $formValidations->validateEmail($emailAddress);
-    //validateRadio
-    //validateRegistration
-    //validateCheckbox
+    if($formValidations->validateName($name) && $formValidations->validateUsPhone($phoneNumber)  && $formValidations->validateEmail($emailAddress)  && $formValidations->validateRadio($radio)  && $formValidations->validateRegistration($registration)) {
+      header("Location: accepted.html");
+    }
+    // If all is good, then go to my page
   }
 ?>
 <!DOCTYPE html>
@@ -65,10 +89,6 @@
   		#orderArea h3	{
   			text-align:center;
   		}
-  		.error	{
-  			color:red;
-  			font-style:italic;
-  		}
 
   		#prod_number {
   			display: none;
@@ -77,6 +97,11 @@
   		.displayNumber {
   			display: none;
   		}
+
+      .errorMessage {
+        color:red;
+        font-style:italic;
+      }
 		</style>
 	</head>
 	<body>
@@ -88,27 +113,28 @@
 		  <h3>Customer Registration Form</h3>
 		      <p>
 		        <label for="name">Name:</label>
-		        <input type="text" name="name" id="name" value="<?php echo $name; ?>">
+		        <input type="text" name="name" id="name" value="<?php echo $name; ?>"><label class="errorMessage"> <?php echo "$nameErrMsg"; ?></label>
 		      </p>
 		      <p>
 		        <label for="phoneNumber">Phone Number:</label>
-		        <input type="text" name="phoneNumber" id="phoneNumber" value="<?php echo $phoneNumber; ?>">
+		        <input type="text" name="phoneNumber" id="phoneNumber" value="<?php echo $phoneNumber; ?>"><label class="errorMessage"><?php echo "$numberErrMsg"; ?></label>
 		      </p>
 		      <p>
 		        <label for="emailAddress">Email Address: </label>
-		        <input type="text" name="emailAddress" id="emailAddress" value="<?php echo $emailAddress; ?>">
+		        <input type="text" name="emailAddress" id="emailAddress" value="<?php echo $emailAddress; ?>"><label class="errorMessage"><?php echo "$emailErrMsg"; ?></label>
 		      </p>
 		      <p>
 		        <label for="registration">Registration: </label>
 		        <select name="registration" id="registration">
-		          <option value="" <?php if(isset($registration) && $registration=="") echo "selected"; ?>>Choose Type</option>
+		          <option value="neg" selected <?php if(isset($registration) && $registration=="") echo "selected"; ?>>Choose Type</option>
 		          <option value="attendee" <?php if(isset($registration) && $registration=="attendee") echo "selected"; ?>>Attendee</option>
 		          <option value="Presenter" <?php if(isset($registration) && $registration=="Presenter") echo "selected"; ?>>Presenter</option>
 		          <option value="volunteer" <?php if(isset($registration) && $registration=="volunteer") echo "selected"; ?>>Volunteer</option>
 		          <option value="guest" <?php if(isset($registration) && $registration=="guest") echo "selected"; ?>>Guest</option>
 		        </select>
+            <label class="errorMessage"> <?php echo "$registrationErrMsg" ?> </label>
 		      </p>
-		      <p>Badge Holder:</p>
+		      <p>Badge Holder:</p><label class="errorMessage"> <?php echo "$badgeErrMsg"; ?> </label>
 		      <p>
 		        <input type="radio" name="radio" id="clip" value="clip" <?php if(isset($radio) && $radio=="clip") echo "checked"; ?>>
 		        <label for="clip">Clip</label> <br>
