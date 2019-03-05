@@ -1,6 +1,6 @@
 <?php
 //Step1
- $db = mysqli_connect('localhost','root','','wdv341')
+ $db = mysqli_connect('localhost','cbuchwald229_341','Brooke132','cbuchwald229_341')
  or die('Error connecting to MySQL server.');
 ?>
 <!DOCTYPE HTML>
