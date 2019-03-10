@@ -7,7 +7,7 @@
 <html>
  <head>
    <meta charset="UTF-8">
-   <title>Testing the Validations class</title>
+   <title>Database Testing</title>
    <style>
      body {
        background-color: purple;

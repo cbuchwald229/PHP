@@ -29,9 +29,6 @@
 				<li>
 					<a href="../WDV341/WDV341Intro.php"> Homework for WDV341 </a>
 				</li>
-				<li>
-					<a href="../artwork.htm"> Artwork </a>
-				</li>
 			</ul>
 		</nav>
 		<img src="../images/php_class.jpg" width=300px height=300px class="imagefloatright"/>
@@ -60,6 +57,8 @@
 						<div>
 							<a href="Homework/Emailer/testEmailer.php">Emailer</a>
 						</div>
+					</div>
+					<div class="column">
 						<h3>Unit 5</h3>
 						<div>
 							<a href="Homework/Unit5/selfPostValidation/selfPostExample.php">Self Posting Form</a>
@@ -77,6 +76,10 @@
 						<h3>Unit 7</h3>
 						<div>
 							<a href="Homework/Unit7/firstDbPage.php">Testing Database Connection</a>
+						</div>
+						<h3>Unit 8</h3>
+						<div>
+							<a href="Homework/Unit8/eventsForm.php">Inserting Data into Events Database</a>
 						</div>
 					</div>
 				</div>
