@@ -81,6 +81,13 @@
 						<div>
 							<a href="Homework/Unit8/eventsForm.php">Inserting Data into Events Database</a>
 						</div>
+						<h3>Unit 9</h3>
+						<div>
+							<a href="Homework/Unit9/selectEvents.php">Selecting Data in Events Database</a>
+						</div>
+						<div>
+							<a href="Homework/Unit9/selectOneEvent.php">Selecting One Row in Events Database</a>
+						</div>
 					</div>
 				</div>
 			</div>
