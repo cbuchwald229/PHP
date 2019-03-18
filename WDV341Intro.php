@@ -11,7 +11,7 @@
 			WDV341 Home Page	-->
 	</head>
 	<body>
-		<h1 class="centerheader"><img src="../images/website_header.jpg" width="1240px" height="260px"/></h1>
+		<h1 class="centerheader"><img src="../images/personalBanner.jpg" width="1240px" height="260px"/></h1>
 		<nav>
 			<ul>
 				<li>
