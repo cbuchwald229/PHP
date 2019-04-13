@@ -25,10 +25,10 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `wdv341_event`
+-- Table structure for table `wdv341_event_class`
 --
 
-CREATE TABLE `wdv341_event` (
+CREATE TABLE `wdv341_event_class` (
   `event_id` int(11) NOT NULL,
   `event_name` varchar(200) NOT NULL,
   `event_description` varchar(300) NOT NULL,
@@ -38,10 +38,10 @@ CREATE TABLE `wdv341_event` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `wdv341_event`
+-- Dumping data for table `wdv341_event_class`
 --
 
-INSERT INTO `wdv341_event` (`event_id`, `event_name`, `event_description`, `event_presenter`, `event_date`, `event_time`) VALUES
+INSERT INTO `wdv341_event_class` (`event_id`, `event_name`, `event_description`, `event_presenter`, `event_date`, `event_time`) VALUES
 (1, 'WDV341 Intro PHP', 'Learning how to use and work with PHP', 'Jeff Gullion', '2018-10-25', '00:00:00'),
 (2, 'WDV321 Advanced Javascript', 'Discusses JQuery and other Javascript applications.', 'Jasmine Francois', '2019-01-20', '00:00:00'),
 (3, 'WDV321 Advanced Javascript', 'Discusses JQuery and other Javascript applications.', 'Ikea Javas', '2018-09-20', '00:00:00'),
@@ -52,9 +52,9 @@ INSERT INTO `wdv341_event` (`event_id`, `event_name`, `event_description`, `even
 --
 
 --
--- Indexes for table `wdv341_event`
+-- Indexes for table `wdv341_event_class`
 --
-ALTER TABLE `wdv341_event`
+ALTER TABLE `wdv341_event_class`
   ADD PRIMARY KEY (`event_id`);
 
 --
@@ -62,9 +62,9 @@ ALTER TABLE `wdv341_event`
 --
 
 --
--- AUTO_INCREMENT for table `wdv341_event`
+-- AUTO_INCREMENT for table `wdv341_event_class`
 --
-ALTER TABLE `wdv341_event`
+ALTER TABLE `wdv341_event_class`
   MODIFY `event_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
